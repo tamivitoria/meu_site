@@ -1,2 +1,46 @@
-{ % block conteudo %} 
-{% endblock conteudo %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+       
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <title>base</title>
+
+    </head>
+    <body>
+    
+        {% block nav %}
+
+        <nav class="navbar navbar-expand-lg navbar-light"  style="background-color: #add8e6">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                <a class="nav-link" href="home.html" style="text-align: center; font-family: times new roman; font-weight: 500; font-size:90%; font-style: normal; color: #585858;  width: 200px; height: 100%">HOME </a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="_login.html" style="font-family: times new roman; font-size:90%; font-weight: 500; font-style: normal; color: #585858;  width: 150px; height: 100%; text-align: center"> LOGIN</a>
+                </li>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle"  role="button" data-toggle="dropdown" style="text-align: center; font-family: times new roman; font-size:90%; font-weight: 500; font-style: normal; color: #585858"> CADASTRO </a>
+                <div class="dropdown-menu" aria-labelledby="navbarCadastro" style="text-align: left; font-family: times new roman; font-size:85%; font-weight: 500; font-style: normal; color: #EDEDED; width: 50px; height: 150%">
+                    <a class="dropdown-item" href="_cadastroSurdos.html" style="justify-content: center" >Surdos</a><br>
+                    <a class="dropdown-item" href="_cadastroEmpresa.html" style="justify-content: center">Empresas</a> 		  
+                </li>
+            </ul>
+            <form class="form-inline"    style="justify-content: flex-end">
+            <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar">
+            <button class="btn btn-#add8e6" my-2 my-sm-0" type="submit"> &#128269 </button> 
+            </form>
+            </div>
+         </div>
+       </nav>
+          
+    {% endblock nav %}
+
+
+    </body>
+</html>
