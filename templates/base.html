@@ -1,76 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <!-- Compiled and minified CSS -->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-        <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css"/>
 
-        <title>base</title>
+     {% block head %}
+     {% endblock %}
+
 
     </head>
 
-<body>
-<nav>
-     <div class="nav-wrapper" style="background-color: #00CED1">
-         <a href="#" class="center brand-logo" style="text-align: center">Inclusão de Surdos no Mercado de Trabalho</a>
-         <a href="#" data-activates="menu-mobile" class="button-collapse">
-             <i class="material-icons">menu</i>
-         </a>
+    <body>
+
+      <nav>
+        <div class="nav-wrapper" style="background-color: #02d1a4">
+          <a href="#" class="center brand-logo" style="text-align: center">Inclusão de Surdos no Mercado de Trabalho</a>
+          <a href="#" data-activates="menu-mobile" class="button-collapse">
+            <i class="material-icons">menu</i>
+          </a>
          <ul class="right hide-on-med-and-down">
-             <li><a href="#">Pagina Inicial</a></li>
-             <li><a href="#">Login</a></li>
-             <li><a class='dropdown-button' data-beloworigin='true' href='#' data-activates='dropdown1' style="background-color: #00CED1">Cadastro<i class="material-icons right">arrow_drop_down</i></a></li>
+            <li><a href="#">Pagina Inicial</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a class='dropdown-button' data-beloworigin='true' href='#' data-activates='dropdown1' style="background-color: #02d1a4">Cadastro<i class="material-icons right">arrow_drop_down</i></a></li>
          </ul>
          <ul id="dropdown1" class="dropdown-content">
-          <li><a href="#!">Empresas</a></li>
-          <li><a href="#!">Surdos</a></li>
-        </ul>
+            <li><a href="#!">Empresas</a></li>
+            <li><a href="#!">Surdos</a></li>
+         </ul>
         
          <ul class="side-nav" id="menu-mobile" style="background-color: #02d1a4">
-             <li><a href="#">Pagina Inicial</a></li>
-             <li><a href="#">Login</a></li>
-             <li><a href="#">Cadastro<i class="material-icons right">arrow_drop_down</i></a></li>
-             <li><a href="#">ㅤEmpresas</a></li>
-             <li><a href="#"> ㅤSurdos</a></li>
-       </ul>
-       
-    </div>
- </nav>
-<div class="container">
-        <div class="tudo">
-		  <br/>
-		  <h1  style="font-family: times new roman; font-size:230%; font-style: normal; font-weight: 500; color: #585858; text-align: center"> INCLUSÃO DOS SURDOS NO MERCADO DE TRABALHO </h1>
-		  <br/>
-		  <br/>
-		  <br/>
-		  <p style="text-align:justify"> Desde sempre os surdos no mercado de trabalho encontram muitas dificuldades. Esse quadro vem se alterando nos últimos tempos, principalmente por causa da lei de Cotas e de programas que visam capacitar pessoas deficientes. </p>  <br/>
-          <p style="text-align:justify"> De acordo com Conselho Nacional dos Direitos das Pessoas Portadoras de Deficiência Física (Conade), as principais dificuldades da inclusão dos surdos no mercado de trabalho são a comunicação, a adaptação, o preconceito e a ausência de especialização e formação adequada, visto que não existem tantas instituições que ofereçam possibilidades para a profissionalização de pessoas surdas, além da falta de intérpretes de Libras em escolas, faculdades e cursos. </p>  <br/>
-		  <p style="text-align:justify"> Um dos passos mais importantes para a inclusão de surdos no mercado de trabalho foi a Lei n° 8.213, de 24 de julho do ano de 1991, que é referente a lei de Cotas para a inclusão e contratação de pessoas com deficiências. Segundo a legislação brasileira, as empresas com mais de 100 funcionários deveriam destinar de 2% a 5% das vagas para deficientes. </p>  <br/>
-		  <p style="text-align:justify"> No entanto, a maioria dessas companhias contratam somente para cumprir a cota e não realizam uma inclusão real, aumentando ainda mais a exclusão e o preconceito. Assim, faz-se necessário que as políticas públicas sejam mais atuantes e que garantam aos surdos o direito à saúde, educação, trabalho e respeito pelas diferenças.  </p>
-		  <br/>
-          <div class="vid" style=" margin: 0 auto; width: 400px; display: block">
-            <video width="500" height="250" controls="controls">
-            <source src="inclu.mp4" type="video/mp4">
-            </video>
-			<p style="font-size:70%"> Sinal da inclusão. Por Hugo, intérprete virtual do  Hand Talk. </p>
-		  <br/>
-		  <br/>
-		  <br/>
-		  <br/>
-	      </div>
+            <li><a href="#" style="color: white">Pagina Inicial</a></li>
+            <li><a href="#" style="color: white">Login</a></li>
+            <li><a href="#" style="color: white">Cadastro<i class="material-icons right" style="color: white">arrow_drop_down</i></a></li>
+            <li><a href="#" style="color: white">ㅤEmpresas</a></li>
+            <li><a href="#" style="color: white"> ㅤSurdos</a></li>
+         </ul>
         </div>
-	</div>
+      </nav>
+
+      <div class="container">
+        {% block content %}{% endblock %}
+
+      </div>
+
+     
 	
 
-<footer class="page-footer">
+      <footer class="page-footer" style="background-color: #02d1a4">
           <div class="container">
             <div class="row">
               <div class="col l6 s12">
-
                 <p class="grey-text text-lighten-4">Esse site foi desenvolvido com o objetivo de auxiliar a inclusão de pessoas surdas no mercado de trabalho, além de orientar e conscientizar a todos sobre a importância da inclusão dos surdos em espaços sociais. </p>
               </div>
               <div class="col l4 offset-l2 s12">
@@ -90,26 +67,10 @@
           </div>
         </footer>
             
-
- <!-- Compiled and minified CSS -->
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
- <!-- Compiled and minified JavaScript -->
- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
-<script>$(function(){$(".button-collapse").sideNav();});</script>
-<script> $('.dropdown-button').dropdown({
-  inDuration: 300,
-  outDuration: 225,
-  constrain_width: false,
-  hover: true, 
-  gutter: 0, 
-  belowOrigin: false,
-  alignment: 'left'
-});</script>
-</body>
+        {% block compiled %}
+        
+        {% endblock %}
+  </body>
 
 
 </html>
