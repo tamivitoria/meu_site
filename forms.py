@@ -9,13 +9,11 @@ from wtforms.validators import DataRequired, Length, Email, EqualTo
 
 
 
-
-
-class CadastroForm(FlaskForm):
+class CadastroUsuarioForm(FlaskForm):
     
     username = StringField (
         'Usuário',
-        validators=[DataRequired(), Length(min=2, max=80)])
+        validators=[DataRequired(), Length(min=2, max=80)])    
     email = StringField (
         'Email',
         validators=[DataRequired(), Length(min=2, max=80)])
