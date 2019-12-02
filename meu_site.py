@@ -1,6 +1,11 @@
 from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 from forms import CadastroForm()
+from jinja2 import Environment, PackageLoader, select_autoescape
+env = Environment(
+    loader=PackageLoader('yourapplication', 'templates'),
+    autoescape=select_autoescape(['html', 'xml'])
+)
 
 app = Flask (__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///meu_site.db'
@@ -10,12 +15,13 @@ db = SQLAlchemy(app)
 
 class Usuario(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(80), unique=True, nullable=False)
+    login =  db.Column(db.String(30), unique=True, nullable=False)
+    username = db.Column(db.String(20), unique=True, nullable=False)
     email = db.Column(db.String(200), unique=True, nullable=False)
     password = db.Column(db.String(8), nullable=False)
 
     def __repr__(self):
-        return "<User %r>" % self.username
+        return "[User: %r]" % self.username
         
 
 
@@ -33,6 +39,7 @@ def index():
 @app.route ("/login")
 def login():
     return render_template("login.html")
+
 
 @app.route ("/cadastro")
 def cadastro():
