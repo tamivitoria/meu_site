@@ -1,9 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <!-- Compiled and minified CSS -->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css"/>
+  
+      <title>{% block title %} Pagina Inicial {% endblock title %} </title>
 
-     {% block head %}
-     {% endblock %}
 
 
     </head>
@@ -11,19 +18,20 @@
     <body>
 
       <nav>
+        
         <div class="nav-wrapper" style="background-color: #02d1a4">
-          <a href="#" class="center brand-logo" style="text-align: center">Inclusão de Surdos no Mercado de Trabalho</a>
+          <a href="/" class="center brand-logo" style="text-align: center">Inclusão de Surdos no Mercado de Trabalho</a>
           <a href="#" data-activates="menu-mobile" class="button-collapse">
             <i class="material-icons">menu</i>
           </a>
          <ul class="right hide-on-med-and-down">
-            <li><a href="#">Pagina Inicial</a></li>
-            <li><a href="#">Login</a></li>
+            <li><a href="/">Pagina Inicial</a></li>
+            <li><a href="/login">Login</a></li>
             <li><a class='dropdown-button' data-beloworigin='true' href='#' data-activates='dropdown1' style="background-color: #02d1a4">Cadastro<i class="material-icons right">arrow_drop_down</i></a></li>
          </ul>
          <ul id="dropdown1" class="dropdown-content">
-            <li><a href="#!">Empresas</a></li>
-            <li><a href="#!">Surdos</a></li>
+            <li><a href="/cadastro/usuario">Empresas</a></li>
+            <li><a href="/cadastro/empresa">Usuários</a></li>
          </ul>
         
          <ul class="side-nav" id="menu-mobile" style="background-color: #02d1a4">
@@ -36,10 +44,7 @@
         </div>
       </nav>
 
-      <div class="container">
-        {% block content %}{% endblock %}
-
-      </div>
+        {% block content %} {% endblock content %} 
 
      
 	
