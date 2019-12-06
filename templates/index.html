@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 
+{% block title %} Pagina inicial {% endblock title %}
+
+
+
 {% block content %}
 
     <body>
@@ -14,15 +18,14 @@
         <br/>
         <br/>
         <br/>
-        <p style="text-align:justify"> Desde sempre os surdos no mercado de trabalho encontram muitas dificuldades. Esse quadro vem se alterando nos últimos tempos, principalmente por causa da lei de Cotas e de programas que visam capacitar pessoas deficientes. </p>  <br/>
+        <p style="text-align:justify"> Desde sempre os surdos no mercado de trabalho encontram muitas dificuldades. Esse quadro vem se alterando nos últimos tempos, principalmente por causa da lei de Cotas e de programas que visam capacitar pessoas deficientes. </p> 
         <p style="text-align:justify"> De acordo com Conselho Nacional dos Direitos das Pessoas Portadoras de Deficiência Física (Conade), as principais dificuldades da inclusão dos surdos no mercado de trabalho são a comunicação, a adaptação, o preconceito e a ausência de especialização e formação adequada, visto que não existem tantas instituições que ofereçam possibilidades para a profissionalização de pessoas surdas, além da falta de intérpretes de Libras em escolas, faculdades e cursos. </p>  <br/>
         <p style="text-align:justify"> Um dos passos mais importantes para a inclusão de surdos no mercado de trabalho foi a Lei n° 8.213, de 24 de julho do ano de 1991, que é referente a lei de Cotas para a inclusão e contratação de pessoas com deficiências. Segundo a legislação brasileira, as empresas com mais de 100 funcionários deveriam destinar de 2% a 5% das vagas para deficientes. </p>  <br/>
         <p style="text-align:justify"> No entanto, a maioria dessas companhias contratam somente para cumprir a cota e não realizam uma inclusão real, aumentando ainda mais a exclusão e o preconceito. Assim, faz-se necessário que as políticas públicas sejam mais atuantes e que garantam aos surdos o direito à saúde, educação, trabalho e respeito pelas diferenças.  </p>
         <br/>
         <div class="vid" style=" margin: 0 auto; width: 400px; display: block">
-          <img src="gif">
-          <video width="500" height="250" controls="controls">
-          <source src="{{ url_for('static', filename='inclu.mp4')}}" type="video/mp4">
+          <video width="500" height="250" controls="controls" loop="">
+          <source src="{{ url_for('static', filename='video/inclu.mp4')}}" type="video/mp4">
           </video>
           <p style="font-size:70%"> Sinal da inclusão. Por Hugo, intérprete virtual do  Hand Talk. </p>
         <br/>
@@ -33,27 +36,30 @@
       </div>
     </div>
 
+    <footer class="page-footer" style="position: absolute; width:100%; left: 0; background-color: #FF7F50">
+        <div class="container">
+          <div class="row">
+            <div class="col l6 s12">
+              <p class="grey-text text-lighten-4">Esse site foi desenvolvido com o objetivo de auxiliar a inclusão de pessoas surdas no mercado de trabalho, além de orientar e conscientizar a todos sobre a importância da inclusão dos surdos em espaços sociais. </p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+              <h5 class="white-text">Entre em contato:</h5>
+              <ul>
+                <li><a class="grey-text text-lighten-3"> contato@incluisurdos.com.br</a></li>
+                <li><a class="grey-text text-lighten-3">tamivitoria03@gmail.com</a></li>
+                <li><a class="grey-text text-lighten-3">nataliaprates06@gmail.com </a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="container">
+           Inclusão de Surdos no Mercado de Trabalho © 2019 | Todos os direitos reservados.
+          </div>
+        </div>
+      </footer>
         
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
-    <script>$(function(){$(".button-collapse").sideNav();});</script>
-    <script> $('.dropdown-button').dropdown({
-        inDuration: 300,
-        outDuration: 225,
-        constrain_width: false,
-        hover: true, 
-        gutter: 0, 
-        belowOrigin: false,
-        alignment: 'left'
-    });</script>
-
+    
 
 </body>
 
