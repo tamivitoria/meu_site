@@ -4,6 +4,7 @@ from wtforms import (
     PasswordField,
     SubmitField,
     BooleanField,
+    IntegerField
 )
 from wtforms.validators import DataRequired, Length, Email, EqualTo
 
@@ -11,65 +12,32 @@ from wtforms.validators import DataRequired, Length, Email, EqualTo
 
 class CadastroUsuarioForm(FlaskForm):
     
-
-    nome_completo = StringField (
-        'Nome Completo',
-        validators=[DataRequired(), Length(min=2, max=80)])
-    data_nascimento = StringField (
-        'Data de Nascimento',
-        validators=[DataRequired(), Length(min=2, max=80)])
-    uf = StringField (
-        'Estado',
-        validators=[DataRequired(), Length(min=2, max=80)])
-    cidade = StringField (
-        'Cidade',
-        validators=[DataRequired(), Length(min=2, max=80)])
-    username = StringField (
-        'Usuário',
-        validators=[DataRequired(), Length(min=4, max=30)])    
-    email = StringField (
-        'Email',
-        validators=[DataRequired(), Length(min=2, max=80)])
-    password = PasswordField (
-        'Senha',
-        validators=[DataRequired()])
-    confirmar_password = StringField (
-        'Repita a Senha',
-        validators=[DataRequired(),EqualTo('password')])
-    
+    name = StringField ('Nome completo', validators=[DataRequired(), Length(min=2, max=80)])
+    idade = IntegerField ('Idade', validators=[DataRequired()])
+    uf = StringField ('Estado', validators=[DataRequired(), Length(min=2, max=80)])
+    cidade = StringField ('Cidade', validators=[DataRequired(), Length(min=2, max=80)])
+    username = StringField ('Usuário', validators=[DataRequired(), Length(min=4, max=30)])    
+    email = StringField ('Email', validators=[DataRequired(), Email(message="Email invalido"), Length(min=2, max=80)])
+    password = PasswordField ('Senha', validators=[DataRequired()])
+    confirmar_password = PasswordField ('Repita a Senha', validators=[DataRequired(),EqualTo('password')])
+    botao = SubmitField("Cadastrar")   
 
 
 class CadastroEmpresaForm(FlaskForm):
     
-
-    nome_completo = StringField (
-        'Nome da Empresa',
-        validators=[DataRequired(), Length(min=2, max=80)])
-    CNPJ = StringField (
-        'CNPJ',
-        validators=[DataRequired(), Length(min=2, max=80)])
-    uf = StringField (
-        'Estado',
-        validators=[DataRequired(), Length(min=2, max=80)])
-    cidade = StringField (
-        'Cidade',
-        validators=[DataRequired(), Length(min=2, max=80)])
-    username = StringField (
-        'Usuário',
-        validators=[DataRequired(), Length(min=4, max=30)])    
-    email = StringField (
-        'Email',
-        validators=[DataRequired(), Length(min=2, max=80)])
-    password = PasswordField (
-        'Senha',
-        validators=[DataRequired()])
-    confirmar_password = StringField (
-        'Repita a Senha',
-        validators=[DataRequired(),EqualTo('password')])
-    
+    name = StringField ('Nome da Empresa', validators=[DataRequired(), Length(min=2, max=80)])
+    CNPJ = StringField ('CNPJ', validators=[DataRequired(), Length(min=2, max=80)])
+    uf = StringField ('Estado', validators=[DataRequired(), Length(min=2, max=80)])
+    cidade = StringField ('Cidade', validators=[DataRequired(), Length(min=2, max=80)])
+    username = StringField ('Usuário', validators=[DataRequired(), Length(min=4, max=30)])    
+    email = StringField ('Email', validators=[DataRequired(), Email(message="Email invalido"), Length(min=2, max=80)])
+    password = PasswordField ('Senha', validators=[DataRequired()])
+    confirmar_password = PasswordField ('Repita a Senha', validators=[DataRequired(),EqualTo('password')])
+    botao = SubmitField("Cadastrar")
 
 
 class LoginForm(FlaskForm):
     username = StringField('Nome de usuário', validators=[DataRequired()])
     password = PasswordField('Senha', validators=[DataRequired()])
     remember_me = BooleanField('Lembrar-me', validators=[DataRequired()])
+    botao = SubmitField("Entrar")
