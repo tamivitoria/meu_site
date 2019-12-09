@@ -11,9 +11,11 @@
 <div class="row">
     <div class="col s12 m8 offset-m4">
         <br/>
-        <h4>Cadastro</h4>
 
         <form action="" method="POST" class="col s6">
+
+           <h1  style="font-family: times new roman; font-size:230%; font-style: normal; font-weight: 500; color: #585858">CADASTRO</h1>
+
             {{ form.csrf_token }}
 
             {{ form.hidden_tag() }} 
@@ -61,27 +63,26 @@
 <br/>
 
 <footer class="page-footer" style="position: absolute; width:100%; left: 0; background-color: #FF7F50">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+          <p class="grey-text text-lighten-4">Site desenvolvido com o objetivo de auxiliar e conscientizar sobre a importância da inclusão de pessoas surdas no mercado de trabalho. </p>
+      </div>
+      <div class="col l4 offset-l2 s12">
+        <h6 class="white-text">Entre em contato:</h6>
+        <ul>
+          <li><a class="grey-text text-lighten-3">tamivitoria03@gmail.com</a></li>
+          <li><a class="grey-text text-lighten-3">nataliaprates06@gmail.com </a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
     <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <p class="grey-text text-lighten-4">Esse site foi desenvolvido com o objetivo de auxiliar a inclusão de pessoas surdas no mercado de trabalho, além de orientar e conscientizar a todos sobre a importância da inclusão dos surdos em espaços sociais. </p>
-        </div>
-        <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Entre em contato:</h5>
-          <ul>
-            <li><a class="grey-text text-lighten-3"> contato@incluisurdos.com.br</a></li>
-            <li><a class="grey-text text-lighten-3">tamivitoria03@gmail.com</a></li>
-            <li><a class="grey-text text-lighten-3">nataliaprates06@gmail.com </a></li>
-          </ul>
-        </div>
-      </div>
+     Inclusão de Surdos no Mercado de Trabalho © 2019 | Todos os direitos reservados.
     </div>
-    <div class="footer-copyright">
-      <div class="container">
-       Inclusão de Surdos no Mercado de Trabalho © 2019 | Todos os direitos reservados.
-      </div>
-    </div>
-  </footer>
+  </div>
+</footer>
     
 
 {% endblock content %}
