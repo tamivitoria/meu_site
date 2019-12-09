@@ -11,7 +11,7 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
       <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css"/>
   
-      <title>{% block title %} Pagina Inicial {% endblock title %} </title>
+      <title>{% block title %} base {% endblock title %} </title>
 
 
       {% endblock head %}
@@ -24,7 +24,7 @@
       <nav>
         
         <div class="nav-wrapper" style="background-color: #FF7F50">
-          <a href="/" class="center brand-logo" style="text-align: center">Inclusão de Surdos no Mercado de Trabalho</a>
+          <a href="/" class="center brand-logo" style="text-align: center">PISMT</a>
           <a href="#" data-activates="menu-mobile" class="button-collapse">
             <i class="material-icons">menu</i>
           </a>
@@ -35,7 +35,7 @@
          </ul>
          <ul id="dropdown1" class="dropdown-content">
             <li><a href="/cadastro/empresa" style="color:#FF7F50">Empresas</a></li>
-            <li><a href="/cadastro/usuario" style="color:#FF7F50">Usuários</a></li>
+            <li><a href="/cadastro/usuario" style="color:#FF7F50">Usuarios</a></li>
          </ul>
         
          <ul class="side-nav" id="menu-mobile" style="background-color: #FF7F50">
@@ -68,7 +68,16 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
         <script>$(function(){$(".button-collapse").sideNav();});</script>
         <script src="{{ url_for('static', filename = 'js/menu.js') }}"> </script>
-
+        <div vw class="enabled">
+          <div vw-access-button class="active"></div>
+          <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+          </div>
+        </div>
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+          new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>
         {% endblock lnk %}
   </body>
 
