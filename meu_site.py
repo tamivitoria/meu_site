@@ -54,7 +54,7 @@ def index():
 
 @app.route ("/login", methods=["GET", "POST"])
 def login():
-   
+    form = LoginForm()   
     return render_template("login.html", form=form)
 
 
@@ -82,6 +82,9 @@ def cadastroEmpresa():
     return render_template("cadastroEmpresa.html", form=form)
 
 
+@app.route ("/saiba-mais")
+def saibamais():
+    return render_template("saibamais.html")
 
 
 if __name__ == ('__main__'):
